@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": "curl -s http://localhost:3847/start"
+      }
+    ],
+    "stop": [
+      {
+        "command": "curl -s http://localhost:3847/pause"
+      }
+    ]
+  }
+}
