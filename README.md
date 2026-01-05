@@ -2,6 +2,10 @@
 
 A Cursor extension that lets you play a game while waiting for AI responses.
 
+## Demo
+
+<video src="demo/between-tokens-demo.mp4" controls width="600"></video>
+
 ## Installation
 
 ### 1. Build the extension
