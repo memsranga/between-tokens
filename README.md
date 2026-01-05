@@ -24,7 +24,11 @@ This creates a `.vsix` file in the project root.
 2. `Cmd+Shift+P` -> "Extensions: Install from VSIX..."
 3. Select the generated `.vsix` file
 
-### 3. Configure Cursor hooks
+### 3. Configure Cursor Hooks
+
+This extension uses [Cursor Hooks](https://docs.cursor.com/agent/hooks) to detect when AI prompts are submitted and completed.
+
+Cursor Hooks are a feature introduced in Cursor 1.7 that allow you to intercept and respond to agent lifecycle events. They enable you to run custom commands at specific points during AI interactions, such as before a prompt is submitted, after a file is edited, or when the agent stops.
 
 Add the following to `.cursor/hooks.json` in your project (or `~/.cursor/hooks.json` for global):
 
@@ -75,3 +79,29 @@ npm run play
 ```
 
 Opens `test-game.html` in your browser with buttons to simulate the Cursor hooks.
+
+## About Cursor Hooks
+
+[Cursor Hooks](https://docs.cursor.com/agent/hooks) are a powerful feature introduced in Cursor 1.7 that allow developers to intercept and customize AI agent behavior at specific lifecycle events.
+
+### Available Hook Events
+
+| Event | Description |
+|-------|-------------|
+| `beforeSubmitPrompt` | Triggered before an AI prompt is submitted |
+| `afterFileEdit` | Triggered after the agent edits a file |
+| `beforeShellExecution` | Triggered before a shell command runs |
+| `beforeMCPExecution` | Triggered before an MCP tool is executed |
+| `beforeReadFile` | Triggered before a file is read |
+| `stop` | Triggered when the agent stops or completes |
+
+### Hook Configuration
+
+Hooks are defined in a `hooks.json` file:
+- **Global hooks**: `~/.cursor/hooks.json` (applies to all projects)
+- **Project hooks**: `[project]/.cursor/hooks.json` (applies to specific project)
+
+### Documentation
+
+- Official Cursor Hooks Documentation: https://docs.cursor.com/agent/hooks
+- Cursor 1.7 Changelog: https://cursor.com/changelog/1-7/
