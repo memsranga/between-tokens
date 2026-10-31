@@ -5,7 +5,7 @@ A Cursor extension that lets you play a game while waiting for AI responses.
 ## Demo
 
 ![Demo](https://github.com/memsranga/between-tokens/blob/2e5fd29f959e5f82a20b31c513d8f9edb9e07fb8/demo/between-tokens-demo.gif)
-This is test
+remove this: This is test
 
 ## Installation
 
